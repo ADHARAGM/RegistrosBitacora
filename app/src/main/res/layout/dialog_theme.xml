@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="260dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_dialog"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/tvSubtitle"
+        android:text="@string/tema"/>
+    <RadioGroup
+        android:id="@+id/rgCategories"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rbOscuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/darkMode"
+            android:textColor="@color/white"
+            app:buttonTint="@color/rdOscuro"/>
+        <RadioButton
+            android:id="@+id/rbClaro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lightMode"
+            android:textColor="@color/white"
+            android:checked="true"
+            app:buttonTint="@color/rdClaro"/>
+    </RadioGroup>
+
+
+
+</LinearLayout>

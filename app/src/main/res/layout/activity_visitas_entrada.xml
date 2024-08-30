@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.entrada.VisitasEntradaActivity"
+    style="@style/styleApp"
+    android:id="@+id/visitasEntrada">
+    <ImageView
+        android:id="@+id/imgc5"
+        style="@style/imagenC5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0"/>
+    <TextView
+        android:id="@+id/tvTitleRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/tvTitleSubMenu"
+        android:text="@string/registroEndtrada"
+        app:layout_constraintStart_toEndOf="@id/imgc5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitleRE"/>
+
+    <TextView
+        android:id="@+id/tvTitleRE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/tvTitleSubMenu"
+        android:text="@string/registraVisita"
+        app:layout_constraintStart_toEndOf="@id/imgc5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleRegistro"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/lPadreVi"/>
+    <ScrollView
+        android:id="@+id/lPadreVi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgc5"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuardarEntradaVisitas">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+
+            >
+
+            <EditText
+                android:id="@+id/nombreVisitaEt"
+                style="@style/ediTextLinear"
+                android:layout_width="match_parent"
+                android:hint="@string/nombre"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/provieneEt"
+                style="@style/ediTextLinear"
+                android:layout_width="match_parent"
+                android:hint="@string/proviene"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/asutoVisitaEt"
+                style="@style/ediTextLinear"
+                android:layout_width="match_parent"
+                android:hint="@string/asunto"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/departamentoEt"
+                style="@style/ediTextLinear"
+                android:layout_width="match_parent"
+                android:hint="@string/departamento"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/nombreDirigeEt"
+                style="@style/ediTextLinear"
+                android:layout_width="match_parent"
+                android:hint="@string/dirige"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/noTarjetaEt"
+                style="@style/ediTextLinear"
+                android:layout_width="match_parent"
+                android:hint="@string/tarjeta"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                style="@style/tvSubtitle"
+                android:text="@string/leyendaProtocolo"/>
+            <RadioGroup
+                android:id="@+id/rgProtocolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    android:id="@+id/rbSi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/rdSi"
+                    android:text="@string/si"
+                    style="@style/tvSubtitle"/>
+                <RadioButton
+                    android:id="@+id/rbNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/rdNo"
+                    android:checked="true"
+                    android:text="@string/no"
+                    style="@style/tvSubtitle" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnGuardarEntradaVisitas"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:text="@string/guardar"
+        style="@style/btnGuardar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lPadreVi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

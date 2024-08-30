@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">registrosBitacora</string>
+    <string name="entrada">Entrada</string>
+    <string name="salida">Salida</string>
+    <string name="personal">Personal</string>
+    <string name="vehiculos">Vehiculos</string>
+    <string name="visitas">Visitas</string>
+    <string name="tituloEntrada">Registro de entrada</string>
+    <string name="tituloSalida">Registro de salida</string>
+    <string name="registroEndtrada">Registro de entrada</string>
+    <string name="registroSalida">Registro de salida</string>
+    <string name="registraEmpleado">personal</string>
+    <string name="registraVisita">visitas</string>
+    <string name="registraVehiculo">vehiculos</string>
+
+    <!--DIALOG TEMA -->
+    <string name="tema">Elige un tema</string>
+    <string name="darkMode">Modo oscuro</string>
+    <string name="lightMode">Modo claro</string>
+    <string name="defaultMode">Modo default-celular</string>
+
+    <string name="Pideclave">Inserte la clave de empleado</string>
+    <string name="leyendaProtocolo">¿Entra con protocolo a C5?</string>
+    <string name="si">si</string>
+    <string name="no">no</string>
+    <string name="guardar">guardar</string>
+    <!--VISITAS -->
+    <string name="nombre">Inserte nombre completo</string>
+    <string name="proviene">¿De dónde proviene?</string>
+    <string name="asunto">Asunto de su visita</string>
+    <string name="departamento">Departamento al que se dirige</string>
+    <string name="dirige">¿Con quién se dirige?</string>
+    <string name="tarjeta">Número de tarjeta</string>
+    <!--VEHICULOS -->
+    <string name="acompaniantes">Inserte número de acompañantes</string>
+    <string name="nombreConductor">Nombre del conductor</string>
+    <string name="placas">Placas del vehículo</string>
+    <string name="modelo">Modelo del vehículo</string>
+    <string name="color">Color del vehículo</string>
+
+
+</resources>

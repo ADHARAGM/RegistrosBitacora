@@ -1,0 +1,87 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RegistrosBitacora" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/background_app</item>
+        <item name="colorPrimaryVariant">@color/background_app</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/purple_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/background_app</item>
+    </style>
+    <style name="tvSubtitle">
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/subtitle_text</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+    <style name="cvButton">
+        <item name="android:layout_width">145dp</item>
+        <item name="cardBackgroundColor">@color/background_buttons</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+
+    </style>
+    <style name="cvLinnearLayout">
+        <item name="android:paddingHorizontal">30dp</item>
+        <item name="android:paddingVertical">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="tvTitle">
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="viewLine">
+        <item name="android:layout_height">3dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+    </style>
+    <style name="tvTitleSubMenu">
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="ediText">
+        <item name="android:layout_height">60dp</item>
+        <item name="hintTextColor">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="textAllCaps">true</item>
+    </style>
+    <style name="btnGuardar">
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/subtitle_text</item>
+        <item name="backgroundTint">@color/background_buttons</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+    </style>
+    <style name="ediTextLinear">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:layout_marginTop">25dp</item>
+    </style>
+    <style name="imagenC5">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:src">@drawable/loco_c5</item>
+    </style>
+    <style name="styleApp">
+        <item name="background">@color/background_app</item>
+        <item name="android:background">@color/background_app</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <style name="alertDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">@color/background_dialog</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:titleTextColor" tools:targetApi="m">@color/white</item>
+    </style>
+
+</resources>
