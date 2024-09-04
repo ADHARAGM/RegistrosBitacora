@@ -9,5 +9,5 @@ class SaveEntradaVehiculosIUseCase {
 
     private val repository = VehiculosRepository()
 
-    suspend operator fun invoke(datosVehiculo: DatosVehiculo): responseServices?= repository.saveEntradaVehiculos(datosVehiculo )
+    suspend operator fun invoke(datosVehiculo: DatosVehiculo): String?= repository.saveEntradaVehiculos(datosVehiculo )
 }

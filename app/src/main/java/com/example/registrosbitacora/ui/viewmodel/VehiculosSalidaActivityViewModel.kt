@@ -10,7 +10,7 @@ import com.example.registrosbitacora.domain.SaveSalidaVehiculosIUseCase
 import kotlinx.coroutines.launch
 
 class VehiculosSalidaActivityViewModel: ViewModel() {
-    private val data= MutableLiveData<responseServices>()
+    private val data= MutableLiveData<String>()
     private val getData= SaveSalidaVehiculosIUseCase()
 
 
@@ -21,7 +21,7 @@ class VehiculosSalidaActivityViewModel: ViewModel() {
         }
     }
 
-    fun getMessageData(): MutableLiveData<responseServices> {
+    fun getMessageData(): MutableLiveData<String> {
         return data
     }
 }

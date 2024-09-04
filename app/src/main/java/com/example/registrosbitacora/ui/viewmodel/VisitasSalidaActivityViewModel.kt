@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class VisitasSalidaActivityViewModel: ViewModel() {
 
-    private val data= MutableLiveData<responseServices>()
+    private val data= MutableLiveData<String>()
     private val getData= SaveSalidaVisitasIUseCase()
 
 
@@ -23,7 +23,7 @@ class VisitasSalidaActivityViewModel: ViewModel() {
         }
     }
 
-    fun getMessageData(): MutableLiveData<responseServices> {
+    fun getMessageData(): MutableLiveData<String> {
         return data
     }
 }

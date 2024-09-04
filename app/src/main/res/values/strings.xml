@@ -26,7 +26,7 @@
     <string name="guardar">guardar</string>
     <!--VISITAS -->
     <string name="nombre">Inserte nombre completo</string>
-    <string name="proviene">¿De dónde proviene?</string>
+    <string name="proviene">¿Pertenece a alguna institución? especifique cuál</string>
     <string name="asunto">Asunto de su visita</string>
     <string name="departamento">Departamento al que se dirige</string>
     <string name="dirige">¿Con quién se dirige?</string>
@@ -35,7 +35,7 @@
     <string name="acompaniantes">Inserte número de acompañantes</string>
     <string name="nombreConductor">Nombre del conductor</string>
     <string name="placas">Placas del vehículo</string>
-    <string name="modelo">Modelo del vehículo</string>
+    <string name="modelo">Marca/Submarca</string>
     <string name="color">Color del vehículo</string>
 
 

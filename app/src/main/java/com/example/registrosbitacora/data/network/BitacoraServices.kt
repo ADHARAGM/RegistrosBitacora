@@ -15,51 +15,82 @@ import retrofit2.create
 class BitacoraServices {//esta es la que hara el llamado al servicio por internet
 
     private val retrofit= RetrofitHelper.getUrl()
-
-    suspend fun guardaEntradaEmpleado(clave:String, protocolo:String): responseServices{
+    private var sendMessage:String="";
+    //3 tipos de hilos
+    // main el que pinta la ui
+    //io que no requiere mucho procesamiento
+    //default procesaro informacion
+    suspend fun guardaEntradaEmpleado(clave:String, protocolo:String): String{
+          return withContext(Dispatchers.IO){
+            val response:Response<responseServices> = retrofit.create(ApiClient::class.java).saveEntradaEmpleado(DatosEmpleado(clave, protocolo))
+            if(!response.isSuccessful){
+                sendMessage="Error de conexión"
+            }else{
+                sendMessage=  response.body()!!.respMensaje.toString()
+            }
+              sendMessage
+        }
+    }
+    suspend fun guardaSalidaEmpleado(clave:String): String{
         return withContext(Dispatchers.IO){
-            val response:responseServices = retrofit.create(ApiClient::class.java).saveEntradaEmpleado(DatosEmpleado(clave, protocolo))
-
-            response
+            val response:Response<responseServices> = retrofit.create(ApiClient::class.java).saveSalidaEmpleado(DatosEmpleado(clave,""))
+            if(!response.isSuccessful){
+                sendMessage="Error de conexión"
+            }else{
+                sendMessage=  response.body()!!.respMensaje.toString()
+            }
+            sendMessage
         }
     }
 
-    suspend fun guardaSalidaEmpleado(clave:String): responseServices{
+    suspend fun guardaEntradaVehiculo(datosVehiculo: DatosVehiculo): String{
         return withContext(Dispatchers.IO){
-            val response:responseServices = retrofit.create(ApiClient::class.java).saveSalidaEmpleado(DatosEmpleado(clave,""))
-
-            response
+            val response:Response<responseServices> = retrofit.create(ApiClient::class.java).saveEntradaVehiculos(datosVehiculo)
+            if(!response.isSuccessful){
+                sendMessage="Error de conexión"
+            }else{
+                sendMessage=  response.body()!!.respMensaje.toString()
+            }
+            sendMessage
         }
     }
-
-    suspend fun guardaEntradaVehiculo(datosVehiculo: DatosVehiculo): responseServices{
+    suspend fun guardaSalidaVehiculo(placa:String):String{
         return withContext(Dispatchers.IO){
-            val response:responseServices = retrofit.create(ApiClient::class.java).saveEntradaVehiculos(datosVehiculo)
-            response
-        }
-    }
-    suspend fun guardaSalidaVehiculo(placa:String):responseServices{
-        return withContext(Dispatchers.IO){
-            val response:responseServices=retrofit.create(ApiClient::class.java).saveSalidaVehiculos(
+            val response:Response<responseServices> =retrofit.create(ApiClient::class.java).saveSalidaVehiculos(
                 DatosVehiculoSalida (placa)
             )
-            response
+            if(!response.isSuccessful){
+                sendMessage="Error de conexión"
+            }else{
+                sendMessage=  response.body()!!.respMensaje.toString()
+            }
+            sendMessage
         }
     }
-    suspend fun guardaEntradaVisitas(datosVisitas: DatosVisitas):responseServices{
+    suspend fun guardaEntradaVisitas(datosVisitas: DatosVisitas):String{
         return withContext(Dispatchers.IO){
-            val response:responseServices=retrofit.create(ApiClient::class.java).saveEntradaVisita(
+            val response:Response<responseServices> =retrofit.create(ApiClient::class.java).saveEntradaVisita(
                 (datosVisitas)
             )
-            response
+            if(!response.isSuccessful){
+                sendMessage="Error de conexión"
+            }else{
+                sendMessage=  response.body()!!.respMensaje.toString()
+            }
+            sendMessage
         }
     }
-    suspend fun guardaSalidaVisitas(noTarjeta: Tarjeta):responseServices{
+    suspend fun guardaSalidaVisitas(noTarjeta: Tarjeta):String{
         return withContext(Dispatchers.IO){
-            val response:responseServices=retrofit.create(ApiClient::class.java).saveSalidaVisita(
+            val response:Response<responseServices> =retrofit.create(ApiClient::class.java).saveSalidaVisita(
                 (noTarjeta)
             )
-            response?:responseServices("")
+            if(!response.isSuccessful){
+                sendMessage="Error de conexión"
+            }else{
+                sendMessage=  response.body()!!.respMensaje.toString()
+            }
+            sendMessage
         }
     }
 }

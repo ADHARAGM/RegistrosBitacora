@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class VehiculosEntradaActivityViewModel :ViewModel ()
 {
-    private val data= MutableLiveData<responseServices>()
+    private val data= MutableLiveData<String>()
     private val getData= SaveEntradaVehiculosIUseCase()
 
 
@@ -21,7 +21,7 @@ class VehiculosEntradaActivityViewModel :ViewModel ()
         }
     }
 
-    fun getMessageData(): MutableLiveData<responseServices> {
+    fun getMessageData(): MutableLiveData<String> {
         return data
     }
 

@@ -9,5 +9,5 @@ import com.example.registrosbitacora.data.network.VisitasRepository
 class SaveEntradaVisitasIUseCase {
     private val repository = VisitasRepository()
 
-    suspend operator fun invoke(datosVisitas: DatosVisitas): responseServices?= repository.saveEntradaVisitas(datosVisitas )
+    suspend operator fun invoke(datosVisitas: DatosVisitas): String?= repository.saveEntradaVisitas(datosVisitas )
 }

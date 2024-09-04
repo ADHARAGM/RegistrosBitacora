@@ -26,6 +26,7 @@ class VisitasEntradaActivity : AppCompatActivity() {
 
     private fun Listeners() {
         binding.btnGuardarEntradaVisitas.setOnClickListener {
+            protocolo = if (binding.rbSi.isChecked) "si" else "no"
             if (  binding.nombreVisitaEt.text.toString().isNullOrEmpty() ||
                   binding.provieneEt.text.toString().isNullOrEmpty()||
                   binding.asutoVisitaEt.text.toString().isNullOrEmpty()||
@@ -35,7 +36,6 @@ class VisitasEntradaActivity : AppCompatActivity() {
                   protocolo.isNullOrEmpty()) {
                 DialogAlert(this, "Mensaje","Inserte todos los datos que se te piden")
             } else {
-                protocolo = if (binding.rbSi.isChecked) "si" else "no"
                 visitiasEntradaActivityViewModel.guardaEntradaVehiculo(
                     DatosVisitas(
                         binding.nombreVisitaEt.text.toString(),
@@ -50,8 +50,8 @@ class VisitasEntradaActivity : AppCompatActivity() {
                 )
             }
             visitiasEntradaActivityViewModel.getMessageData().observeOnce { resp ->
-                if (!resp.respMensaje.isEmpty()) {
-                    DialogAlert(this, "Mensaje", resp.respMensaje)
+                if (!resp.isEmpty()) {
+                    DialogAlert(this, "Mensaje", resp)
                     //Toast.makeText(this, it.respMensaje, Toast.LENGTH_LONG).show()
                 } else {
                     DialogAlert(this, "Mensaje", "ERROR")

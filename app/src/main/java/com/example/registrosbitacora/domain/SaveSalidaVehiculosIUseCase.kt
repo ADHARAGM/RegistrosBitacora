@@ -7,5 +7,5 @@ import com.example.registrosbitacora.data.network.VehiculosRepository
 class SaveSalidaVehiculosIUseCase {
     private val repository = VehiculosRepository()
 
-    suspend operator fun invoke(placa:String): responseServices?= repository.saveSalidaVehiculos(placa )
+    suspend operator fun invoke(placa:String): String?= repository.saveSalidaVehiculos(placa )
 }

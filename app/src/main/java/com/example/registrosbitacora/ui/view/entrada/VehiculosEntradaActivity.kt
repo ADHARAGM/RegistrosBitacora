@@ -33,13 +33,14 @@ class VehiculosEntradaActivity : AppCompatActivity() {
                 vehiculosEntradaActivityViewModel.guardaEntradaVehiculo(
                     DatosVehiculo(binding.conductorEt.text.toString(),
                                 binding.acompanianteEt.text.toString().toInt(),
+                                binding.departamentoEtV.text.toString(),
                                 binding.placaEt.text.toString(),
                                 binding.modeloEt.text.toString(),
                                 binding.colorEt.text.toString())
                 )
                 vehiculosEntradaActivityViewModel.getMessageData().observeOnce(Observer { resp ->
-                    if (!resp.respMensaje.isEmpty()) {
-                        DialogAlert(this, "Mensaje", resp.respMensaje)
+                    if (!resp.isEmpty()) {
+                        DialogAlert(this, "Mensaje", resp)
 
                         //Toast.makeText(this, it.respMensaje, Toast.LENGTH_LONG).show()
                     } else {

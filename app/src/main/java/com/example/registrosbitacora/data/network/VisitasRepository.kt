@@ -9,13 +9,13 @@ class VisitasRepository {
 
     private val api = BitacoraServices()
 
-    suspend fun saveEntradaVisitas(datosVisitas: DatosVisitas) : responseServices {
+    suspend fun saveEntradaVisitas(datosVisitas: DatosVisitas) : String {
 
         val response=api.guardaEntradaVisitas(datosVisitas)
 
         return response
     }
-    suspend fun saveSalidaVisitas(noTarjeta: Tarjeta): responseServices {
+    suspend fun saveSalidaVisitas(noTarjeta: Tarjeta): String {
         val response=api.guardaSalidaVisitas(noTarjeta)
         return response
     }

@@ -70,6 +70,13 @@
                 android:inputType="number" />
 
             <EditText
+                android:id="@+id/departamentoEtV"
+                style="@style/ediTextLinear"
+                android:layout_width="match_parent"
+                android:hint="@string/departamento"
+               android:inputType="text" />
+
+            <EditText
                 android:id="@+id/placaEt"
                 style="@style/ediTextLinear"
                 android:layout_width="match_parent"

@@ -10,7 +10,7 @@ object RetrofitHelper {
 
     fun getUrl():Retrofit{
         return Retrofit.Builder()
-            .baseUrl("https://desarrollo.cesmorelos.gob.mx/appComercio/ApiBitacoraRegistros/")
+            .baseUrl("http://187.216.222.148/appComercio/ApiBitacoraRegistros/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()

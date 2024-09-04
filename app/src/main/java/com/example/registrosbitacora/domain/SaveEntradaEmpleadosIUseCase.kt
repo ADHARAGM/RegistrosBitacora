@@ -7,6 +7,6 @@ class SaveEntradaEmpleadosIUseCase { //interactor
 
     private val repository = EmpleadosRepository()
 
-    suspend operator fun invoke(clave:String, protocolo:String): responseServices?= repository.saveEntradaEmpleados(clave, protocolo)
+    suspend operator fun invoke(clave:String, protocolo:String): String?= repository.saveEntradaEmpleados(clave, protocolo)
 
 }

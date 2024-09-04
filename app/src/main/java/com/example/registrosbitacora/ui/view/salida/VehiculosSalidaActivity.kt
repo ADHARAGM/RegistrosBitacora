@@ -29,8 +29,8 @@ class VehiculosSalidaActivity : AppCompatActivity() {
             }else{
                 vehiculosSalidaActivityViewModel.guardaSalidaVehiculo(binding.placaEt.text.toString())
                 vehiculosSalidaActivityViewModel.getMessageData().observeOnce(Observer { resp ->
-                    if (!resp.respMensaje.isEmpty()) {
-                        DialogAlert(this, "Mensaje", resp.respMensaje)
+                    if (!resp.isEmpty()) {
+                        DialogAlert(this, "Mensaje", resp)
 
                         //Toast.makeText(this, it.respMensaje, Toast.LENGTH_LONG).show()
                     } else {

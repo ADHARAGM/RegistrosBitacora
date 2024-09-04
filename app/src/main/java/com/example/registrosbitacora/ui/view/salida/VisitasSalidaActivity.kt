@@ -29,8 +29,8 @@ class VisitasSalidaActivity : AppCompatActivity() {
             }else {
                 visitasSalidaActivityViewModel.guardaSalidaVehiculo(Tarjeta(binding.noTarjetaEt.text.toString()))
                 visitasSalidaActivityViewModel.getMessageData().observeOnce(Observer { resp ->
-                    if (!resp.respMensaje.isEmpty()) {
-                        DialogAlert(this, "Mensaje", resp.respMensaje)
+                    if (!resp.isEmpty()) {
+                        DialogAlert(this, "Mensaje", resp)
                     } else {
                         DialogAlert(this, "Mensaje", "ERROR")
                     }

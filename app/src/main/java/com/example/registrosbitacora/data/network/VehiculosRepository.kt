@@ -7,13 +7,13 @@ class VehiculosRepository {
 
     private val api = BitacoraServices()
 
-    suspend fun saveEntradaVehiculos(datosVehiculo: DatosVehiculo) : responseServices {
+    suspend fun saveEntradaVehiculos(datosVehiculo: DatosVehiculo) : String {
 
         val response=api.guardaEntradaVehiculo(datosVehiculo)
 
         return response
     }
-    suspend fun saveSalidaVehiculos(placa:String):responseServices{
+    suspend fun saveSalidaVehiculos(placa:String):String{
         val response=api.guardaSalidaVehiculo(placa)
         return response
     }
